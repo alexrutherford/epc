@@ -1,1 +1,3 @@
 # epc
+
+This repo grabs EPC certificates by postcode (for now)...
