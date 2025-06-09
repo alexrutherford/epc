@@ -29,6 +29,17 @@ def fetch_certificates(
     postcode: str, 
     auth_header: Dict[str, str]
 ) -> List[CertRow]:
+    """
+    Fetches certificate rows from a paginated API endpoint for a given postcode.
+    Args:
+        api_url (str): The base URL of the API endpoint.
+        postcode (str): The postcode to filter certificates by.
+        auth_header (Dict[str, str]): A dictionary containing authentication headers.
+    Returns:
+        List[CertRow]: A list of certificate rows retrieved from the API.
+    Raises:
+        requests.HTTPError: If the API request fails.
+    """
     all_rows = []
     page = 0
     page_size = 100  # Adjust as needed, API default is often 100
